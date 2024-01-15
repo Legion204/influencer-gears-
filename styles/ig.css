@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
 }
+
 /* img{
     width: 100%;
 } */
@@ -35,7 +36,7 @@
 .nav-container {
     display: flex;
     justify-content: space-between;
-    margin: 60px 120px 50px 120px;
+    margin: 60px 120px 60px 120px;
     align-items: center;
 
 }
@@ -88,21 +89,82 @@
     margin-bottom: 15px;
 }
 
-.banner-img{
+.banner-img {
     background-image: url(../images/Circle\ design.svg);
     background-repeat: no-repeat;
-    background-size:contain;
+    background-size: contain;
     position: relative;
     right: 145px;
 
 }
+
 /* sponsors styles */
-.sponsors{
+.sponsors {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 60px;
     padding: 140px;
+}
+
+/* collection styles */
+
+.Collection-container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+}
+
+.Collection-container h1 {
+    color: var(--primary-color);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.Collection-products {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    max-width: 330px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+}
+
+.card h2 {
+    color: #18191F;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.card h3 {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 5px 0 5px 0;
+}
+
+.card p {
+    color:#787885;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.card img {
+    width: 100%;
+}
+
+.checked {
+    color: gold;
 }
 
 
@@ -122,36 +184,47 @@
 /* responsive media query */
 /* mobile devices */
 @media screen and (max-width:576px) {
-    .nav-container{
+    .nav-container {
         flex-direction: column;
         margin: 20px;
-        align-items:flex-start;
+        align-items: flex-start;
     }
-    .nav-content{
+
+    .nav-content {
         flex-direction: column;
     }
-    .nav-container h2{
-        padding-bottom:20px;
+
+    .nav-container h2 {
+        padding-bottom: 20px;
     }
-    .nav-content a{
-        padding-top:20px ;
+
+    .nav-content a {
+        padding-top: 20px;
     }
-    .banner{
+
+    .banner {
         flex-direction: column-reverse;
     }
-    .banner-img{
+
+    .banner-img {
         right: 0;
     }
-    .banner-img img{
+
+    .banner-img img {
         width: 400px;
     }
 
-    .sponsors{
+    .sponsors {
         flex-wrap: wrap;
         margin: 30px;
         padding: 10px;
     }
-    .sponsors img{
+
+    .sponsors img {
         padding: 10px;
+    }
+
+    .Collection-products{
+        grid-template-columns: repeat(1, 300px);
     }
 }
